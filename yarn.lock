@@ -6037,6 +6037,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@udecode/plate-marks-affinity@workspace:^, @udecode/plate-marks-affinity@workspace:packages/mark-affinity":
+  version: 0.0.0-use.local
+  resolution: "@udecode/plate-marks-affinity@workspace:packages/mark-affinity"
+  dependencies:
+    "@udecode/plate-common": "workspace:^"
+    lodash: "npm:^4.17.21"
+  peerDependencies:
+    "@udecode/plate-common": ">=31.3.2"
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+    slate: ">=0.94.0"
+    slate-history: ">=0.93.0"
+    slate-hyperscript: ">=0.66.0"
+    slate-react: ">=0.99.0"
+  languageName: unknown
+  linkType: soft
+
 "@udecode/plate-media@npm:31.0.0, @udecode/plate-media@workspace:^, @udecode/plate-media@workspace:packages/media":
   version: 0.0.0-use.local
   resolution: "@udecode/plate-media@workspace:packages/media"
@@ -21351,6 +21368,7 @@ __metadata:
     "@udecode/plate-line-height": "workspace:^"
     "@udecode/plate-link": "workspace:^"
     "@udecode/plate-list": "workspace:^"
+    "@udecode/plate-marks-affinity": "workspace:^"
     "@udecode/plate-media": "workspace:^"
     "@udecode/plate-mention": "workspace:^"
     "@udecode/plate-node-id": "workspace:^"

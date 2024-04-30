@@ -33,6 +33,10 @@ import {
   createSubscriptPlugin,
   createSuperscriptPlugin,
   createUnderlinePlugin,
+  MARK_BOLD,
+  MARK_ITALIC,
+  MARK_STRIKETHROUGH,
+  MARK_UNDERLINE,
 } from '@udecode/plate-basic-marks';
 import {
   createBlockquotePlugin,
@@ -49,7 +53,7 @@ import {
   ELEMENT_CODE_BLOCK,
 } from '@udecode/plate-code-block';
 import { createComboboxPlugin } from '@udecode/plate-combobox';
-import { createCommentsPlugin } from '@udecode/plate-comments';
+import { createCommentsPlugin, MARK_COMMENT } from '@udecode/plate-comments';
 import {
   createPlugins,
   Plate,
@@ -63,6 +67,11 @@ import {
   createFontBackgroundColorPlugin,
   createFontColorPlugin,
   createFontSizePlugin,
+  MARK_BG_COLOR,
+  MARK_COLOR,
+  MARK_FONT_FAMILY,
+  MARK_FONT_SIZE,
+  MARK_FONT_WEIGHT,
 } from '@udecode/plate-font';
 import {
   createHeadingPlugin,
@@ -83,6 +92,7 @@ import { createColumnPlugin } from '@udecode/plate-layout';
 import { createLineHeightPlugin } from '@udecode/plate-line-height';
 import { createLinkPlugin } from '@udecode/plate-link';
 import { createListPlugin, createTodoListPlugin } from '@udecode/plate-list';
+import { createMarkAffinityPlugin } from '@udecode/plate-marks-affinity';
 import {
   createImagePlugin,
   createMediaEmbedPlugin,
@@ -191,6 +201,22 @@ export const usePlaygroundPlugins = ({
           createItalicPlugin({ enabled: !!enabled.italic }),
           createUnderlinePlugin({ enabled: !!enabled.underline }),
           createStrikethroughPlugin({ enabled: !!enabled.strikethrough }),
+          createMarkAffinityPlugin({
+            options: {
+              validMarks: [
+                MARK_BG_COLOR,
+                MARK_BOLD,
+                MARK_COLOR,
+                MARK_UNDERLINE,
+                MARK_FONT_FAMILY,
+                MARK_FONT_SIZE,
+                MARK_FONT_WEIGHT,
+                MARK_ITALIC,
+                MARK_STRIKETHROUGH,
+                MARK_COMMENT,
+              ],
+            },
+          }),
           createCodePlugin({ enabled: !!enabled.code }),
           createSubscriptPlugin({ enabled: !!enabled.subscript }),
           createSuperscriptPlugin({ enabled: !!enabled.superscript }),

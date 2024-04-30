@@ -82,6 +82,7 @@
     "@udecode/plate-line-height": "workspace:^",
     "@udecode/plate-link": "workspace:^",
     "@udecode/plate-list": "workspace:^",
+    "@udecode/plate-marks-affinity": "workspace:^",
     "@udecode/plate-media": "workspace:^",
     "@udecode/plate-mention": "workspace:^",
     "@udecode/plate-node-id": "workspace:^",
